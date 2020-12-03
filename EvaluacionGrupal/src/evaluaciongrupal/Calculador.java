@@ -190,19 +190,19 @@ public class Calculador extends javax.swing.JFrame {
 
     private void btSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSumaActionPerformed
        
-        JOptionPane.showMessageDialog(null,"Suma = " + ual.sumar());
+        JOptionPane.showMessageDialog(null,"Suma = " + this.ual.sumar());
     }//GEN-LAST:event_btSumaActionPerformed
 
     private void btMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMultiplicacionActionPerformed
-        JOptionPane.showMessageDialog(null,"Producto = " + ual.multiplicar());
+        JOptionPane.showMessageDialog(null,"Producto = " + this.ual.multiplicar());
     }//GEN-LAST:event_btMultiplicacionActionPerformed
 
     private void btMenorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMenorActionPerformed
-        JOptionPane.showMessageDialog(null,"El menor es = " + ual.menor());
+        JOptionPane.showMessageDialog(null,"El menor es = " + this.ual.menor());
     }//GEN-LAST:event_btMenorActionPerformed
 
     private void btIgualesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIgualesActionPerformed
-        ual.igual();
+        this.ual.igual();
     }//GEN-LAST:event_btIgualesActionPerformed
 
     private void bBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBorrarActionPerformed
