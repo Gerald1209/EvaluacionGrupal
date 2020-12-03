@@ -184,6 +184,8 @@ public class Calculador extends javax.swing.JFrame {
     private void bSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSaveActionPerformed
         this.memoria.setM1(Float.parseFloat(this.tfNum1.getText()));
         this.memoria.setM2(Float.parseFloat(this.tfNum2.getText()));
+        
+        this.memoria.save();
     }//GEN-LAST:event_bSaveActionPerformed
 
     private void btSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSumaActionPerformed
