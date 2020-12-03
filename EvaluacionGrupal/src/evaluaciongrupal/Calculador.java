@@ -29,8 +29,8 @@ public class Calculador extends javax.swing.JFrame {
         tfNum1 = new javax.swing.JTextField();
         tfNum2 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        bSave = new javax.swing.JButton();
+        bBorrar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         btSuma = new javax.swing.JButton();
         btMenor = new javax.swing.JButton();
@@ -52,14 +52,14 @@ public class Calculador extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton1.setText("Guardar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        bSave.setText("Guardar");
+        bSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                bSaveActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Borrar");
+        bBorrar.setText("Borrar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -68,17 +68,17 @@ public class Calculador extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(bSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bBorrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(bSave)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(bBorrar)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -176,9 +176,10 @@ public class Calculador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfNum1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void bSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSaveActionPerformed
+        this.memoria.setM1(Float.parseFloat(this.tfNum1.getText()));
+        this.memoria.setM2(Float.parseFloat(this.tfNum2.getText()));
+    }//GEN-LAST:event_bSaveActionPerformed
 
     private void btSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSumaActionPerformed
        
@@ -233,12 +234,12 @@ public class Calculador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bBorrar;
+    private javax.swing.JButton bSave;
     private javax.swing.JButton btIguales;
     private javax.swing.JButton btMenor;
     private javax.swing.JButton btMultiplicacion;
     private javax.swing.JButton btSuma;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
