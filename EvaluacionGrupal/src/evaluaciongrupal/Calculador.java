@@ -60,6 +60,11 @@ public class Calculador extends javax.swing.JFrame {
         });
 
         bBorrar.setText("Borrar");
+        bBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bBorrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -197,6 +202,10 @@ public class Calculador extends javax.swing.JFrame {
     private void btIgualesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIgualesActionPerformed
         ual.igual();
     }//GEN-LAST:event_btIgualesActionPerformed
+
+    private void bBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBorrarActionPerformed
+        this.memoria.clear();
+    }//GEN-LAST:event_bBorrarActionPerformed
 
     /**
      * @param args the command line arguments
