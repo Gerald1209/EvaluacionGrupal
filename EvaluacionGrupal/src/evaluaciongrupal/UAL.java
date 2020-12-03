@@ -16,14 +16,14 @@ public class UAL {
 	}
 
 	public void igual(){
-		if(mem.getM1() == mem.getM2())
+		if(this.mem.getM1() == this.mem.getM2())
                     JOptionPane.showMessageDialog(null,"Son iguales");
                 else
                     JOptionPane.showMessageDialog(null,"No son iguales");
 	}
 
 	public float menor(){
-		if(mem.getM1() < mem.getM2())
+		if(this.mem.getM1() < this.mem.getM2())
                     return mem.getM1();
                 else
                     return mem.getM2();
@@ -35,7 +35,8 @@ public class UAL {
 	}
 
 	public float sumar(){
-		return mem.getM1()+mem.getM2();
+            
+            return this.mem.getM1()+ this.mem.getM2();
 	}
 
 }

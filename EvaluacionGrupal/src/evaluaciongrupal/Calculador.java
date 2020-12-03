@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 public class Calculador extends javax.swing.JFrame {
 
     public UAL ual = new UAL();
-    public Memoria memoria = new Memoria();
+    protected Memoria memoria = new Memoria();
 
 	public void finalize() throws Throwable {
 
@@ -182,10 +182,11 @@ public class Calculador extends javax.swing.JFrame {
     }//GEN-LAST:event_tfNum1ActionPerformed
 
     private void bSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSaveActionPerformed
-        float m1 = Float.parseFloat(this.tfNum1.getText());
-        float m2 = Float.parseFloat(this.tfNum2.getText());
+        float num1 = Float.parseFloat(this.tfNum1.getText());
+        float num2 = Float.parseFloat(this.tfNum2.getText());
         
-        this.memoria.save(m1,m2);
+        this.memoria.save(num1,num2);
+        
     }//GEN-LAST:event_bSaveActionPerformed
 
     private void btSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSumaActionPerformed

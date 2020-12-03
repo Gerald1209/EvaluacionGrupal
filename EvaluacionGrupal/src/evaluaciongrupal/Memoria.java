@@ -1,5 +1,7 @@
 package evaluaciongrupal;
 
+import javax.swing.JOptionPane;
+
 
 /**
  * @author Armandol
@@ -33,19 +35,8 @@ public class Memoria {
         return m1;
     }
 
-    public void setM1(float m1) {
-        this.m1 = m1;
-    }
-
     public float getM2() {
         return m2;
-    }
-
-    public void setM2(float m2) {
-        this.m2 = m2;
-    }
-
-    
-        
+    }   
 
 }
