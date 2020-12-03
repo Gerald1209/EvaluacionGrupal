@@ -1,18 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package evaluaciongrupal;
 
-/**
- *
- * @author Marlon Ramirez
- */
+import javax.swing.JOptionPane;
+
 public class Calculador extends javax.swing.JFrame {
 
-    public UAL m_UAL;
-    public Memoria m_Memoria;
+    public UAL ual = new UAL();
+    public Memoria memoria = new Memoria();
 
 	public void finalize() throws Throwable {
 
@@ -38,10 +32,10 @@ public class Calculador extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btSuma = new javax.swing.JButton();
+        btMenor = new javax.swing.JButton();
+        btMultiplicacion = new javax.swing.JButton();
+        btIguales = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora Plus");
@@ -90,13 +84,33 @@ public class Calculador extends javax.swing.JFrame {
 
         jLabel3.setText("Memory");
 
-        jButton3.setText("Calcular Suma");
+        btSuma.setText("Calcular Suma");
+        btSuma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSumaActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("Mostrar el menor");
+        btMenor.setText("Mostrar el menor");
+        btMenor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMenorActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("Calcular Multiplicacion");
+        btMultiplicacion.setText("Calcular Multiplicacion");
+        btMultiplicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMultiplicacionActionPerformed(evt);
+            }
+        });
 
-        jButton6.setText("Verificar si son iguales");
+        btIguales.setText("Verificar si son iguales");
+        btIguales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btIgualesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,7 +120,7 @@ public class Calculador extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(btSuma)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -123,9 +137,9 @@ public class Calculador extends javax.swing.JFrame {
                         .addGap(57, 57, 57))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton6)
-                            .addComponent(jButton5)
-                            .addComponent(jButton4))
+                            .addComponent(btIguales)
+                            .addComponent(btMultiplicacion)
+                            .addComponent(btMenor))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -145,13 +159,13 @@ public class Calculador extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(tfNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(btSuma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
+                .addComponent(btMenor)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton5)
+                .addComponent(btMultiplicacion)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(btIguales)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -165,6 +179,23 @@ public class Calculador extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSumaActionPerformed
+       
+        JOptionPane.showMessageDialog(null,"Suma = " + ual.sumar());
+    }//GEN-LAST:event_btSumaActionPerformed
+
+    private void btMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMultiplicacionActionPerformed
+        JOptionPane.showMessageDialog(null,"Producto = " + ual.multiplicar());
+    }//GEN-LAST:event_btMultiplicacionActionPerformed
+
+    private void btMenorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMenorActionPerformed
+        JOptionPane.showMessageDialog(null,"El menor es = " + ual.menor());
+    }//GEN-LAST:event_btMenorActionPerformed
+
+    private void btIgualesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIgualesActionPerformed
+        ual.igual();
+    }//GEN-LAST:event_btIgualesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,12 +233,12 @@ public class Calculador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btIguales;
+    private javax.swing.JButton btMenor;
+    private javax.swing.JButton btMultiplicacion;
+    private javax.swing.JButton btSuma;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
