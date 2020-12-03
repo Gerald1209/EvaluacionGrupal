@@ -1,14 +1,11 @@
 package evaluaciongrupal;
 
+import javax.swing.JOptionPane;
 
-/**
- * @author Armandol
- * @version 1.0
- * @created 02-Dec-2020 6:14:02 PM
- */
 public class UAL {
 
-	public Memoria m_Memoria;
+	public Memoria mem;
+       
 
 	public UAL(){
 
@@ -18,20 +15,27 @@ public class UAL {
 
 	}
 
-	public boolean igual(){
-		return false;
+	public void igual(){
+		if(mem.getM1() == mem.getM2())
+                    JOptionPane.showMessageDialog(null,"Son iguales");
+                else
+                    JOptionPane.showMessageDialog(null,"No son iguales");
 	}
 
-	public boolean menor(){
-		return false;
+	public float menor(){
+		if(mem.getM1() < mem.getM2())
+                    return mem.getM1();
+                else
+                    return mem.getM2();
+                          
 	}
 
-	public int multiplicar(){
-		return 0;
+	public float multiplicar(){
+		return mem.getM1()* mem.getM2();
 	}
 
-	public int sumar(){
-		return 0;
+	public float sumar(){
+		return mem.getM1()+mem.getM2();
 	}
 
 }
