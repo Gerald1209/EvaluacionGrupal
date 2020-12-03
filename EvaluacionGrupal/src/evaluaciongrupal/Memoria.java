@@ -24,7 +24,7 @@ public class Memoria {
            this.m2 = 0;
 	}
 
-	public void save(){
+	public void save(float m1,float m2){
             this.m1 = m1;
             this.m2 = m2;
 	}
